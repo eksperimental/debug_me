@@ -9,7 +9,6 @@ defmodule BackPort do
     end
   end
 
-  @doc guard: true
   defmacro is_hypothetical_macro(term) do
     quote do
       unquote(term) == :hypothetical_macro
