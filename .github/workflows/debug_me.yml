@@ -209,4 +209,6 @@ jobs:
       - run: mix compile --warnings-as-errors
         if: ${{ matrix.stable }}
 
+      - run: elixir --version
+
       - run: mix test
