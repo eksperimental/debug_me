@@ -3,6 +3,8 @@ defmodule DebugMe do
   Documentation for `DebugMe`.
   """
 
+  @type t(arg) :: [arg] when arg: atom()
+
   @doc """
   Hello world.
 
