@@ -198,15 +198,6 @@ jobs:
       - name: Install Dependencies
         run: mix deps.get
 
-      - run: mix format --check-formatted
-        if: ${{ matrix.stable }}
-
-      - run: mix deps.unlock --check-unused
-        if: ${{ matrix.stable }}
-
       - run: mix deps.compile
 
-      - run: mix compile --warnings-as-errors
-        if: ${{ matrix.stable }}
-
-      - run: mix test
+      - run: ./check.sh

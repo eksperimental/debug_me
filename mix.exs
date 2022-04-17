@@ -1,13 +1,17 @@
 defmodule DebugMe.MixProject do
   use Mix.Project
 
+  @external_resource version_path = "VERSION"
+  @version File.read!(version_path)
+
   def project do
     [
       app: :debug_me,
-      version: "0.1.0",
+      version: @version,
+      _version: @version,
       elixir: "~> 1.0",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
     ]
   end
 
@@ -22,7 +26,7 @@ defmodule DebugMe.MixProject do
   defp deps do
     [
       # {:dep_from_hexpm, "~> 0.3.0"},
-      # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
+      # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.3.0"}
     ]
   end
 end
