@@ -6,9 +6,10 @@ defmodule Mix.Tasks.DebugMe do
   @impl true
   @doc false
   def run([version]) when version in ~w(-v --version) do
-    app_vsn = Application.spec(:debug_me, :vsn)
+    # app_vsn = Application.spec(:debug_me, :vsn)
 
-    Mix.shell().info("v#{@version};#{app_vsn}")
+    # Mix.shell().info("v#{@version};#{app_vsn}")
+    Mix.shell().info("v#{@version}")
   end
 
   def run(args) do
