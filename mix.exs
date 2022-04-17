@@ -1,7 +1,8 @@
 defmodule DebugMe.MixProject do
   use Mix.Project
 
-  @external_resource version_path = "VERSION"
+  # @external_resource version_path = "VERSION"
+  version_path = "VERSION"
   @version File.read!(version_path)
 
   def project do
